@@ -24,14 +24,10 @@ public class App
     	UniDirectionalNode nodeD = new UniDirectionalNode("D");
     	UniDirectionalNode nodeE = new UniDirectionalNode("E");
     	
-    	nodeA.addNode(nodeB, 5);
-    	nodeA.addNode(nodeD, 5);
-    	nodeA.addNode(nodeE, 7);
+    	nodeA.addNode(nodeB, 5).addNode(nodeD, 5).addNode(nodeE, 7);
     	nodeB.addNode(nodeC, 4);
-    	nodeC.addNode(nodeD, 8);
-    	nodeC.addNode(nodeE, 2);
-    	nodeD.addNode(nodeC, 8);
-    	nodeD.addNode(nodeE, 6);
+    	nodeC.addNode(nodeD, 8).addNode(nodeE, 2);
+    	nodeD.addNode(nodeC, 8).addNode(nodeE, 6);
     	nodeE.addNode(nodeB, 3);
     	
     	DefaultGraph<UniDirectionalNode> graph = new DefaultGraph<UniDirectionalNode>(new UniDirectionalGraphStrategy());

@@ -11,8 +11,9 @@ public class UniDirectionalNode extends BaseNode<UniDirectionalNode> {
 		super(id);
 	}
 
-	public void addNode(UniDirectionalNode node, Integer weight) {
+	public UniDirectionalNode addNode(UniDirectionalNode node, Integer weight) {
 		connectedNodes.put(node, weight);
+		return this;
 	}
 
 	public boolean isConnected(UniDirectionalNode destinationNode) {
